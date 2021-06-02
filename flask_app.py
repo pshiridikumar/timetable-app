@@ -239,9 +239,7 @@ from random import randint
 
 @app.route("/generate_final",methods=["POST"])
 def generate_final():
-    global d
-    global d1
-    global labs ,lablist
+ 
     #sys.stdout = open('blocks', 'w') 
 
     rand=[4]
