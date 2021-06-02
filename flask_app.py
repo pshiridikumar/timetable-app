@@ -38,6 +38,7 @@ def viewresult(name):
     s["Course Teachers"]=co
     grouped=[]
     data=[]
+    ind=0
 
     for i in range(len(s)):
         if(s["CBCS"][i]!=0):
