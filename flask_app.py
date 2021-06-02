@@ -17,7 +17,8 @@ global labs,lablist
 app=Flask(__name__)
 @app.route("/viewresult/<string:name>")
 def viewresult(name):
-    global d,d1
+    global d
+    global d1
     global labs ,lablist
     import pandas as pd
     s=pd.read_csv(name)
@@ -237,6 +238,8 @@ from random import randint
 
 @app.route("/generate_final",methods=["POST"])
 def generate_final():
+    global d
+    global d1
     global labs ,lablist
     #sys.stdout = open('blocks', 'w') 
 
@@ -917,21 +920,22 @@ def pie():
         l.append(x)
     cols=l[0]
     l.pop(0)
-    d=pd.DataFrame(l)
+    d2=pd.DataFrame(l)
 
 
 
-    d.columns=cols
+    d2.columns=cols
  
-    orgdata=d
+    orgdata=d2
     orgdata.to_csv("submitted1.csv")
 
-    return render_template("viewfile.html",file=d)
+    return render_template("viewfile.html",file=d2)
 
 
 
 @app.route("/gen")
 def gen():
+    global orgdata
    
     orgdata.to_csv("submitted1.csv")
     import pandas as pd
@@ -954,13 +958,15 @@ def fac_choices():
 
 @app.route("/fac_sel",methods=["POST"])
 def fac_sel():
-    global d1,d
+    global d1
+    global d
     selected=request.form.get("selected")
     return jsonify(dic=d1[selected])
 
 @app.route("/stud_sel",methods=["POST"])
 def stud_sel():
-    global d1,d
+    global d1
+    global d
     selected=request.form.get("selected")
     return jsonify(dic=d[selected])
 
@@ -970,7 +976,8 @@ def teams():
 
 @app.route("/fix_submit_class",methods=["POST"])
 def fix_clas():
-    global d1,d
+    global d1,
+    global d
     global labs
     name=request.form.get("name")
 
