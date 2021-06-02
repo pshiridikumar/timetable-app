@@ -10,7 +10,8 @@ from io import BytesIO
 from flask import Flask, Response
 from flask import send_from_directory
 import sys
-global d,d1
+global d
+global d1
 global labs,lablist
 
 app=Flask(__name__)
@@ -944,6 +945,7 @@ def stud_choices():
 @app.route("/fac_choices",methods=["POST"])
 def fac_choices():
     global d1
+    print(d1)
     return jsonify(keys=list(d1.keys()));
 
 
