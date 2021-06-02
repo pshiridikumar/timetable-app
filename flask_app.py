@@ -1101,6 +1101,13 @@ def index1():
        
         filebool=True
         return render_template("Squadfree/block1.html",file=d,filebool=filebool,submitted=False)
+    
+@app.route('/favicon.ico') 
+def favicon(): 
+    # print(os.path.join(app.root_path, 'assets\images'))
+    # print(send_from_directory(os.path.join(app.root_path, 'assets'), 'index-meta.ico' ,mimetype='image/vnd.microsoft.icon'))
+    return send_from_directory(os.path.join(app.root_path, 'assets'), 'index-meta.ico' ,mimetype='image/vnd.microsoft.icon')
+
 
 if __name__ == '__main__':
    app.run(debug=True)
