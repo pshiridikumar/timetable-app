@@ -1,0 +1,28 @@
+{% extends 'Squadfree/index.html' %}
+{% block block1 %}
+<section id="hero">
+
+{% if generated %}
+<h1 style="color:black;text-shadow: 0 0 20px white, 0 0 30px #ffffff, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white, 0 0 80px white;position:relative;top:5px;text-align:center;font-size:40px;font-family: cursive ;">You are done check below to download and view your timetable !</h1>
+<br>
+<br>
+<div class ="block2" style="position:relative;left:570px">
+
+	<i class="fas fa-download" style="font-size: 24px;"></i><a href="{{url_for('stud')}}" target="_blank" class="card-link1" >Download Students Timetable</a>
+	<br>
+	<i class="fas fa-eye" style="font-size: 24px;"></i><a href="{{url_for('viewfile1')}}" target="_blank" class="card-link1" >View Students Timetable</a>
+	<br>
+	<br>
+	<i class="fas fa-download" style="font-size: 24px;"></i><a href="{{url_for('facu')}}" target="_blank" class="card-link1" >Download Faculty Timetable</a>
+	<br>
+	<i class="fas fa-eye" style="font-size: 24px;"></i><a href="{{url_for('viewfile2')}}" target="_blank" class="card-link1" >View Faculty Timetable</a>
+	<br>
+	<br>
+	<i class="fas fa-download" style="font-size: 24px;"></i><a href="{{url_for('labs')}}" target="_blank" class="card-link1" >Download Labs Timetable</a>
+	<br>
+	<i class="fas fa-eye" style="font-size: 24px;"></i><a href="{{url_for('viewfile3')}}" target="_blank" class="card-link1" >View Labs Timetable</a>
+
+</div>
+{% endif %}
+</section>
+{% endblock %}
