@@ -1106,6 +1106,7 @@ def index1():
     
 @app.route('/favicon.ico') 
 def favicon(): 
+    import os
     # print(os.path.join(app.root_path, 'assets\images'))
     # print(send_from_directory(os.path.join(app.root_path, 'assets'), 'index-meta.ico' ,mimetype='image/vnd.microsoft.icon'))
     return send_from_directory(os.path.join(app.root_path, 'assets'), 'index-meta.ico' ,mimetype='image/vnd.microsoft.icon')
