@@ -78,6 +78,7 @@ def viewresult(name):
                 fl.append(grouped[i][3])
          
             k="/".join(sorted(list(set(cl))));grouped[i][2]=k;grouped[i][4]="CBCS"
+            print(grouped[i])
             k1="/".join(sorted(list(set(fl))));grouped[i][3]=k1
             k2="/".join(sorted(list(set(col))));grouped[i][5]=k2
             t1.extend(list(set(fl)))
