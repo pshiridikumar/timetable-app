@@ -935,7 +935,7 @@ def pie():
 
 @app.route("/gen")
 def gen():
-    global orgdata
+   
    
     orgdata.to_csv("submitted1.csv")
     import pandas as pd
@@ -949,8 +949,7 @@ def stud_choices():
 
 @app.route("/fac_choices",methods=["POST"])
 def fac_choices():
-    global d1
-    print(d1)
+  
     return jsonify(keys=list(d1.keys()));
 
 
