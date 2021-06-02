@@ -974,9 +974,7 @@ def teams():
 
 @app.route("/fix_submit_class",methods=["POST"])
 def fix_clas():
-    global d1
-    global d
-    global labs
+
     name=request.form.get("name")
 
     nar=request.form.get("narr")
