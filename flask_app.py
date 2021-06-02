@@ -945,7 +945,7 @@ def gen():
 
 @app.route("/stud_choices",methods=["POST"])
 def stud_choices():
-    global d
+  
     return jsonify(keys1=list(d.keys()));
 
 @app.route("/fac_choices",methods=["POST"])
