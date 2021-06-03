@@ -11,7 +11,7 @@ from flask import Flask, Response
 from flask import send_from_directory
 import sys
 d={};labs={};labslist={};d1={}
-global labs,lablist
+
 import warnings
 warnings.filterwarnings("ignore")
 
