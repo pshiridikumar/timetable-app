@@ -1,0 +1,20 @@
+{% extends 'Squadfree/index.html' %}
+{% block block1 %}
+<section id="hero"  style="height:800px">
+
+{% if assigned %}
+<div class="block3">
+<h1 style="color:black;text-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white, 0 0 80px white;position:relative;top:5px;text-align:center;font-size:40px;font-family: cursive ;">You are just one step away!!</h1>
+<form method="POST"  enctype="multipart/form-data" action="{{url_for('generate_final')}}">
+
+    <input type = "submit" id="subb" value="Submit and Generate" class="btn btn-dark"  style="position:relative;width:170px;height:40px;font-size:15px;left:660px;top:10px">
+
+</form>
+<input type = "button" id="assib"  value="Assign Fixed Slots" class="btn btn-dark"  style="position:relative;width:200px;height:40px;font-size:15px;top:20px;left:650px;" onclick="fix_slots()">
+</div>
+<br>
+<br>
+{% endif %}
+</section>
+
+{% endblock %}

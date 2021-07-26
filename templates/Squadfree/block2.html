@@ -1,0 +1,42 @@
+{% extends 'Squadfree/index.html' %}
+{% block block1 %}
+<section id="hero">
+
+	{% if generated %}
+	<h1
+		style="color:black;text-shadow: 0 0 20px white, 0 0 30px #ffffff, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white, 0 0 80px white;position:relative;top:5px;text-align:center;font-size:40px;font-family: cursive ;">
+		You are done check below to download and view your timetable !</h1>
+	<br>
+	<br>
+	<div class="block2" style="margin: auto;padding-left:200px;width:100%"></div>
+	<a href="{{url_for('stud')}}" target="_blank" class="card-link1">Download Students Timetable</a>
+	<br>
+	<a href="{{url_for('viewfile1')}}" target="_blank" class="card-link1">View Students Timetable</a>
+	<br>
+	<br>
+	<a href="{{url_for('facu')}}" target="_blank" class="card-link1">Download Faculty Timetable</a>
+	<br>
+	<a href="{{url_for('viewfile2')}}" target="_blank" class="card-link1">View Faculty Timetable</a>
+	<br>
+	<br>
+	<a href="{{url_for('labs')}}" target="_blank" class="card-link1">Download Labs Timetable</a>
+	<br>
+	<a href="{{url_for('viewfile3')}}" target="_blank" class="card-link1">View Labs Timetable</a>
+	<br>
+	<br>
+	</div>
+	<br>
+	<hr>
+	<p 
+		style="text-shadow: 0 0 20px white, 0 0 30px #ffffff, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white, 0 0 80px white;text-align: center;color:black;text-decoration: none;font-size: 24px;font-weight: bold;">looks like there
+		are some blockings which the app couldn't generate.Try making some manual changes for these slots alone.</p>
+	<a href="{{url_for('blockings')}}" target="_blank" class="card-link1" style="text-align: center;margin:42%;">View
+		blockings</a>
+	<br>
+	<br>
+	<a href="{{url_for('generate_final')}}" class="card-link1" style="text-align: center;margin: 35%;">Generate Again a
+		different timetable </a>
+
+	{% endif %}
+</section>
+{% endblock %}
